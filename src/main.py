@@ -1,13 +1,15 @@
 from copy_static import copy_static
 from generate_page import *
 import logging
+import sys
 logger = logging.getLogger(__name__)
+basepath = sys.argv[1]
 
 def main():
     logging.basicConfig(filename='static.log', level=logging.DEBUG)
     logger.info("Logging Started")
-    copy_static("./static/", "./public/")
-    generate_pages_recursive("./content/", "./template.html", "./public/")
+    copy_static("./static/", "./docs/")
+    generate_pages_recursive(f"{basepath}content/", "./template.html", f"{basepath}docs/")
     logger.info("Logging Finished")
 
 main()

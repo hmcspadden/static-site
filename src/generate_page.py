@@ -2,6 +2,7 @@ import os
 from block_converter import markdown_to_blocks
 from markdown_to_html import markdown_to_html_node
 from htmlnode import *
+import re
 
 
 def extract_title(markdown: str) -> str:
@@ -27,8 +28,11 @@ def generate_page(from_path: str, template_path: str, dest_path: str) -> None:
     node = markdown_to_html_node(md)
     html = node.to_html()
     title = extract_title(md)
-    template_with_title = template.replace("{{ Title }}", title)
-    final_html = template_with_title.replace("{{ Content }}", html)
+    final_html = template.replace("{{ Title }}", title)
+    final_html = final_html.replace("{{ Content }}", html)
+    final_html = final_html.replace("href=\"/", f"href=\"{from_path}")
+    final_html = final_html.replace("src=\"/", f"src=\"{from_path}")
+
 
     split_path = dest_path.split("/")
     path_so_far = ""
