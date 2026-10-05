@@ -216,3 +216,22 @@ DEBUG:copy_static:./docs/images/rivendell.png
 DEBUG:copy_static:./docs/images/glorfindel.png
 DEBUG:copy_static:./docs/images/tom.png
 INFO:__main__:Logging Finished
+INFO:__main__:Logging Started
+DEBUG:copy_static:./docs/index.css
+DEBUG:copy_static:./docs/images/tolkien.png
+DEBUG:copy_static:./docs/images/rivendell.png
+DEBUG:copy_static:./docs/images/glorfindel.png
+DEBUG:copy_static:./docs/images/tom.png
+INFO:__main__:Logging Started
+DEBUG:copy_static:./docs/index.css
+DEBUG:copy_static:./docs/images/tolkien.png
+DEBUG:copy_static:./docs/images/rivendell.png
+DEBUG:copy_static:./docs/images/glorfindel.png
+DEBUG:copy_static:./docs/images/tom.png
+INFO:__main__:Logging Started
+DEBUG:copy_static:./docs/index.css
+DEBUG:copy_static:./docs/images/tolkien.png
+DEBUG:copy_static:./docs/images/rivendell.png
+DEBUG:copy_static:./docs/images/glorfindel.png
+DEBUG:copy_static:./docs/images/tom.png
+INFO:__main__:Logging Finished

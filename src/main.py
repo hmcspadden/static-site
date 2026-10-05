@@ -9,7 +9,7 @@ def main():
     logging.basicConfig(filename='static.log', level=logging.DEBUG)
     logger.info("Logging Started")
     copy_static("./static/", "./docs/")
-    generate_pages_recursive(f"{basepath}content/", "./template.html", f"{basepath}docs/")
+    generate_pages_recursive(f"./content/", "./template.html", f"{basepath}docs/")
     logger.info("Logging Finished")
 
 main()
