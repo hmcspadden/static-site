@@ -3,7 +3,9 @@ from block_converter import markdown_to_blocks
 from markdown_to_html import markdown_to_html_node
 from htmlnode import *
 import re
+import sys
 
+basepath = sys.argv[1]
 
 def extract_title(markdown: str) -> str:
     lines = markdown_to_blocks(markdown)
@@ -30,8 +32,8 @@ def generate_page(from_path: str, template_path: str, dest_path: str) -> None:
     title = extract_title(md)
     final_html = template.replace("{{ Title }}", title)
     final_html = final_html.replace("{{ Content }}", html)
-    final_html = final_html.replace("href=\"/", f"href=\"{dest_path[1:]}")
-    final_html = final_html.replace("src=\"/", f"src=\"{dest_path[1:]}")
+    final_html = final_html.replace("href=\"/", f"href=\"{basepath[1:]}")
+    final_html = final_html.replace("src=\"/", f"src=\"{basepath[1:]}")
 
 
     split_path = dest_path.split("/")
