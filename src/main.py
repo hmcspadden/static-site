@@ -8,8 +8,8 @@ basepath = sys.argv[1]
 def main():
     logging.basicConfig(filename='static.log', level=logging.DEBUG)
     logger.info("Logging Started")
-    copy_static("./static/", f"{basepath}docs/")
-    generate_pages_recursive(f"./content/", "./template.html", f"{basepath}docs/")
+    copy_static("./static/", f"./docs/")
+    generate_pages_recursive(f"./content/", "./template.html", f"./docs/")
     logger.info("Logging Finished")
 
 main()
