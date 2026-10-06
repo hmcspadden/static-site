@@ -30,8 +30,8 @@ def generate_page(from_path: str, template_path: str, dest_path: str) -> None:
     title = extract_title(md)
     final_html = template.replace("{{ Title }}", title)
     final_html = final_html.replace("{{ Content }}", html)
-    final_html = final_html.replace("href=\"/", f"href=\"{from_path}")
-    final_html = final_html.replace("src=\"/", f"src=\"{from_path}")
+    final_html = final_html.replace("href=\"/", f"href=\"{dest_path}")
+    final_html = final_html.replace("src=\"/", f"src=\"{dest_path}")
 
 
     split_path = dest_path.split("/")
